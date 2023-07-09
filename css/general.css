@@ -89,7 +89,10 @@ body {
   gap: 9.6rem;
   -moz-column-gap: 6.4rem;
   column-gap: 6.4rem;
-  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
 }
 
 .grid--2-cols {
