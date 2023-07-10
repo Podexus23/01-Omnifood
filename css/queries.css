@@ -116,4 +116,57 @@
   .btn--form {
     margin-top: 2rem;
   }
+
+  /* MOBILE NAVIGATION */
+
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .main-nav {
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    transform: translateX(100%);
+
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in;
+
+    /* hide navigation */
+    /*1) hide visually*/
+    opacity: 0;
+    /*2) <ake it unaccessible to mouse and keyboards*/
+    pointer-events: none;
+    /*3) hide it from screenreaders*/
+    visibility: hidden;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
 }
